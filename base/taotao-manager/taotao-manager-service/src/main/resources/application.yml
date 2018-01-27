@@ -1,0 +1,48 @@
+#tomcat服务端口
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+ 
+#资源配置
+spring:
+  application:
+    name: taotao-manager
+  datasource:
+    url: jdbc:mysql://192.168.25.107:3306/taotao?characterEncoding=utf-8&useSSL=false
+    username: user
+    password: jiushi123
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#mybatis映射配置    
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+pagehelper:
+  helper-dialect: mysql
+  offset-as-page-num: true
+  row-bounds-with-count: true
+  support-methods-arguments: true
+  reasonable: true
+  params: count=countSql
+  
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://user:123456@localhost:8761/eureka,http://user:123456@localhost:8762/eureka,http://user:123456@localhost:8763/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+      
