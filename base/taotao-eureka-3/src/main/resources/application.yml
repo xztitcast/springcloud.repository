@@ -1,0 +1,28 @@
+server:
+  port: 8763
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: eureka-server
+    
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: 123456
+    
+eureka:
+  environment: product
+  datacenter: tramp
+  client:
+    healthcheck:
+      enbaled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://user:123456@localhost:8761/eureka,http://user:123456@localhost:8762/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
