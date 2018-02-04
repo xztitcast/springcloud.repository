@@ -1,6 +1,6 @@
 #tomcat服务端口
 server:
-  port: 8081
+  port: 8084
   tomcat:
     uri-encoding: UTF-8
  
