@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
  * @date 2018年1月27日 下午3:49:09
  * @version
  */
-public class SpringApplicationContext {
+public abstract class SpringAppContextUtil {
 
 	private static ApplicationContext ctx ;
 	
