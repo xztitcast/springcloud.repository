@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.taotao.common.utils.SpringApplicationContext;
+import com.taotao.common.utils.SpringAppContextUtil;
 
 /**
  * 服务入口
@@ -27,7 +27,7 @@ public class TaotaoManagerServiceApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(TaotaoManagerServiceApplication.class, args);
-		SpringApplicationContext.setApplicationContext(context);
+		SpringAppContextUtil.setApplicationContext(context);
 	}
 
 }
