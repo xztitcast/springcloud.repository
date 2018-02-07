@@ -9,6 +9,11 @@
   <dependencies>
   		<dependency>
   			<groupId>com.taotao.cn</groupId>
+		    <artifactId>taotao-framework</artifactId>
+		    <version>${version}</version>
+  		</dependency>
+  		<dependency>
+  			<groupId>com.taotao.cn</groupId>
 		    <artifactId>taotao-manager-pojo</artifactId>
 		    <version>${version}</version>
 		    <exclusions>

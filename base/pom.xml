@@ -45,6 +45,7 @@
   	<module>taotao-manager</module>
   	<module>taotao-manager-web</module>
   	<module>taotao-common</module>
+  	<module>taotao-framework</module>
   </modules>
   <distributionManagement>  
   <repository>  
